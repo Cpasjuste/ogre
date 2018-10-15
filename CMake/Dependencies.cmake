@@ -215,7 +215,7 @@ find_package(Freetype)
 macro_log_feature(FREETYPE_FOUND "freetype" "Portable font engine" "http://www.freetype.org" FALSE "" "")
 
 # Find X11
-if (UNIX AND NOT APPLE AND NOT ANDROID AND NOT EMSCRIPTEN)
+if (UNIX AND NOT APPLE AND NOT ANDROID AND NOT EMSCRIPTEN AND NOT NSWITCH)
   find_package(X11)
   macro_log_feature(X11_FOUND "X11" "X Window system" "http://www.x.org" TRUE "" "")
   find_library(XAW_LIBRARY NAMES Xaw Xaw7 PATHS ${OGRE_DEP_SEARCH_PATH} ${DEP_LIB_SEARCH_DIR} ${X11_LIB_SEARCH_PATH})

@@ -25,6 +25,11 @@ if (APPLE_IOS)
   set(OGRE_CONFIG_ENABLE_PVRTC TRUE)
 endif()
 
+if (NSWITCH)
+  set(OGRE_STATIC TRUE)
+  set(OGRE_STATIC_LIB TRUE)
+endif()
+
 # should we build static libs?
 if (OGRE_STATIC)
   set(OGRE_LIB_TYPE STATIC)

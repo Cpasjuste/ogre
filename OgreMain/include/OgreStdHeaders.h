@@ -49,7 +49,9 @@ extern "C" {
 #if OGRE_PLATFORM == OGRE_PLATFORM_LINUX || OGRE_PLATFORM == OGRE_PLATFORM_ANDROID || OGRE_PLATFORM == OGRE_PLATFORM_EMSCRIPTEN
 extern "C" {
 #   include <unistd.h>
+#ifndef __SWITCH__
 #   include <dlfcn.h>
+#endif
 }
 #endif
 
